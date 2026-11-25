@@ -1,0 +1,6 @@
+if SHIELD_BALLER
+
+config ZMK_KEYBOARD_NAME
+    default "baller"
+
+endif # SHIELD_BALLER
