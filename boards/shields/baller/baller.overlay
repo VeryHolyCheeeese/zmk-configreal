@@ -14,28 +14,28 @@
            means current flows column -> row. */
         diode-direction = "col2row";
 
-        /* 12 columns (outputs) */
+        /* 12 columns (outputs). Comments show the label printed on the board. */
         col-gpios
-            = <&pro_micro 8  GPIO_ACTIVE_HIGH>
-            , <&pro_micro 9  GPIO_ACTIVE_HIGH>
-            , <&pro_micro 10 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 20 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 21 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 0  GPIO_ACTIVE_HIGH>
-            , <&pro_micro 1  GPIO_ACTIVE_HIGH>
+            = <&pro_micro 0  GPIO_ACTIVE_HIGH>  /* col 1  = 008 */
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH>  /* col 2  = 009 */
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH>  /* col 3  = 010 */
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH>  /* col 4  = 111 */
+            , <&pro_micro 15 GPIO_ACTIVE_HIGH>  /* col 5  = 113 */
+            , <&pro_micro 18 GPIO_ACTIVE_HIGH>  /* col 6  = 115 */
+            , <&pro_micro 19 GPIO_ACTIVE_HIGH>  /* col 7  = 002 */
+            , <&pro_micro 20 GPIO_ACTIVE_HIGH>  /* col 8  = 029 */
+            , <&pro_micro 21 GPIO_ACTIVE_HIGH>  /* col 9  = 031 */
+            , <&pro_micro 1  GPIO_ACTIVE_HIGH>  /* col 10 = 006 */
+            , <&pro_micro 8  GPIO_ACTIVE_HIGH>  /* col 11 = 104 */
+            , <&pro_micro 9  GPIO_ACTIVE_HIGH>  /* col 12 = 106 */
             ;
 
         /* 4 rows (inputs, pulled down for col2row) */
         row-gpios
-            = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row 1 = 022 */
+            , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row 2 = 024 */
+            , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row 3 = 100 */
+            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row 4 = 011 */
             ;
     };
 
